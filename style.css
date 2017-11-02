@@ -1,0 +1,137 @@
+/*
+1. 在设置header的外边距的时候,想着margin:0px;但是却没有实现成功;
+    原因:在header的外面是body 而设置header里面的外边距 对其是没有作用的,所以要将body的外边距设置成0
+
+2.解决了左右的外边距之后,上下依旧没有对齐
+    之后将 网站第一标题 替换成 logo 之后就可以了
+3.在做导航栏的时候,总是做不到在header的里面 ...
+    将图标的nav一 同加进来就好了.
+4.在margin做完之后,动里面的排版,需要内边距padding
+5.在footer底部 的宽度明明和上面都是75% 但是显示的时候,就不一样了.
+    78%才明显差不多...
+    明白了,,原来内边距不是让里面的变小,而是给外面的撑大....
+6.当我想要将作者改变颜色的时候,却发现改变不了,,,
+    后来解决了...忘了怎么解决的
+7.关于表单的对齐没有实现
+    */
+
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+body{
+    background-color:gray;
+
+    
+}
+
+.website_header{
+    background-color:red;
+    width:100%;
+    height:50px;
+
+}
+.nav ul{
+    
+    margin:0px;
+    padding:10px;
+    /* padding-top:6px;
+    padding-bottom:6px; */
+    list-style-type:none;
+    float:right;
+    
+    
+}
+.nav li{
+    display:inline;
+    padding:0px;
+}
+.logo{
+
+    width:50px;
+    height:50px;
+
+}
+article,aside{
+    background-color:snow;
+    width:75%;
+    margin:20px auto;
+    padding:20px 20px;
+    border-style:outset;
+}
+footer{
+    background-color:black;
+    width:75%;
+    height:60px;
+    margin:0px auto;
+    padding:20px 20px;
+    color:white;
+    text-align:center;
+    box-shadow:2px 2px 2px gray; 
+}
+
+
+.writer{
+    color:gray;
+}
+.content{
+    text-indent:2em;
+}
+
+article ul div{
+    border:1px outset gray;
+    margin:20px;
+    text-align:center;
+    width:200px;
+    height:200px;
+    
+}
+article div img {
+    width:150px;
+    height:100px;
+    margin:30px;
+}
+
+table th{
+    background-color:black;
+    color:white;
+}
+table tr:last-child{
+    background-color:gray;
+
+}
+table{
+    width:90%;
+    text-align:center;
+    margin:20px auto;
+    
+}
+
+form{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:9px;
+    color: black;
+    width:50%;
+    padding:10px 10px;
+    border:1px  outset black;
+    margin:0 auto; 
+    text-align:center;
+
+}
+form button{
+    background-color:#1E7ACE;
+    width:60%;
+    height:20px;
+}
+.tips{
+    color:#666666;
+ 
+}
+form input,form textarea,form select{
+    
+    margin:10px auto;
+    
+  
+}
